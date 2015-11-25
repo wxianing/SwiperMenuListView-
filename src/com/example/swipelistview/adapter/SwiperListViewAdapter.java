@@ -48,17 +48,17 @@ public class SwiperListViewAdapter extends BaseAdapter {
 			new ViewHolder(convertView);
 		}
 		ViewHolder holder = (ViewHolder) convertView.getTag();
-		holder.tv_name.setText(data.get(position));
+		holder.nameTv.setText(data.get(position));
 		return convertView;
 	}
 
-	class ViewHolder {
-		ImageView iv_icon;
-		TextView tv_name;
+	private static class ViewHolder {
+		ImageView img;
+		TextView nameTv;
 
 		public ViewHolder(View view) {
-			iv_icon = (ImageView) view.findViewById(R.id.iv_icon);
-			tv_name = (TextView) view.findViewById(R.id.tv_name);
+			img = (ImageView) view.findViewById(R.id.iv_icon);
+			nameTv = (TextView) view.findViewById(R.id.tv_name);
 			view.setTag(this);
 		}
 	}
